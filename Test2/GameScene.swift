@@ -83,7 +83,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     func spawnPlayer(){
-        player = SKSpriteNode(color: UIColor.whiteColor(), size: CGSize(width: 40, height: 40))
+        //player = SKSpriteNode(color: UIColor.whiteColor(), size: CGSize(width: 40, height: 40))
+        player = SKSpriteNode(imageNamed: "player")
         player?.position = CGPointMake(frame.midX, 130)
         player?.physicsBody = SKPhysicsBody(rectangleOfSize: (player?.size)!)
         player?.physicsBody?.affectedByGravity = false
@@ -116,7 +117,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnProjectile(){
-        projectile = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(10, 10))
+        //projectile = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(10, 10))
+        projectile = SKSpriteNode(imageNamed: "projectile")
         projectile?.position = CGPoint(x: (player?.position.x)!, y: (player?.position.y)!)
         
         projectile?.physicsBody = SKPhysicsBody(rectangleOfSize: (projectile?.size)!)
@@ -134,7 +136,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func spawnEnemy(){
-        enemy = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(30, 30))
+        //enemy = SKSpriteNode(color: UIColor.redColor(), size: CGSizeMake(30, 30))
+        enemy = SKSpriteNode(imageNamed: "enemy")
         enemy?.position = CGPoint(x: Int(arc4random_uniform(1000) + 300), y: 1000)
         enemy?.physicsBody = SKPhysicsBody(rectangleOfSize: enemy!.size)
         enemy?.physicsBody?.affectedByGravity = false
