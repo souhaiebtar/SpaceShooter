@@ -238,6 +238,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func waitThenMoveToTitleScreen(){
+        let wait = SKAction.waitForDuration(3.0)
+        let transition = SKAction.runBlock{
+            self.view?.presentScene(TitleScene(), transition: SKTransition.crossFadeWithDuration(0.3))
+        }
+        let sequence = SKAction.sequence([wait, transition])
+        self.runAction(SKAction.repeatAction(sequence, count: 1))
     }
     
     func updateScore(){
