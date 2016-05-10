@@ -26,8 +26,8 @@ class TitleScene: SKScene{
     func setUpText(){
         //setup game button and the game title
         btnPlay = UIButton(frame: CGRect(x: 100, y: 100, width: 400, height: 100))
-        btnPlay.center = CGPointMake(view!.frame.size.width / 2, 600)
-        btnPlay.titleLabel?.font = UIFont(name: "Futura", size: 60)
+        btnPlay.center = CGPointMake(view!.frame.size.width / 2, 1100)
+        btnPlay.titleLabel?.font = UIFont(name: "Futura", size: 150)
         btnPlay.setTitle("play", forState: UIControlState.Normal)
         btnPlay.setTitleColor(textColorHUD, forState: UIControlState.Normal)
         
@@ -37,7 +37,7 @@ class TitleScene: SKScene{
         
         gameTitle = UILabel(frame: CGRect(x: 0, y: 0, width: view!.frame.width, height: 300))
         gameTitle!.textColor = textColorHUD
-        gameTitle!.font = UIFont(name: "Futura", size: 40)
+        gameTitle!.font = UIFont(name: "Futura", size: 80)
         gameTitle!.textAlignment = NSTextAlignment.Center
         gameTitle!.text = "ANDROMEDA GALAXY"
         self.view?.addSubview(gameTitle)
